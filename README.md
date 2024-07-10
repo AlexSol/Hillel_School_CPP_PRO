@@ -1,14 +1,17 @@
+
 # Hillel_School_CPP_PRO
 
-- Заняття 1
+ 1. Заняття 1
 	- DRAFT
-- Заняття 2
+ 2. Заняття 2:
+	- new C++ types in C++11 and more
+	 числові типи фіксованого розміру які ввідені в нових стандартах
+	- Range-based for. розглянули синтаксис, як його можно використовувати для контейнерів та як змінювався за стандартами
+	- Auto
+	- Structured binding declaration C++17
+	- Random - Egines. використаня рандому
+	- unordered containers.  розглядаємо метод emplace,  unourdered set і map
 	- std::filesystem
-	- C++11: New C++ types
-	- Random
-	- unordered containers
-	- range-based for
-	- Ranges library(???)
 
 - Заняття 3
 	- New C++ standarts: Smart Pointers
