@@ -1,3 +1,5 @@
+//виведення списку файлів і пакок у директорії
+
 #include <iostream>
 #include <filesystem>
 

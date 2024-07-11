@@ -1,3 +1,5 @@
+// Створення файлу std::filesystem
+
 #include <filesystem>
 #include <iostream>
 

@@ -1,3 +1,5 @@
+// Копіювання файлу через std::filesystem
+
 #include <iostream>
 #include <filesystem>
 

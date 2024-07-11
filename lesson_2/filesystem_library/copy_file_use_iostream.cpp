@@ -1,3 +1,5 @@
+// Копіювання файлу через потоки
+
 #include <iostream>
 #include <fstream>
 
