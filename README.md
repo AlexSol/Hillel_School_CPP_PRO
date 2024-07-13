@@ -13,7 +13,7 @@
 	- unordered containers.  розглядаємо метод emplace,  unourdered set і map
 	- std::filesystem
 
-- Заняття 3
+3. [Заняття 3](lesson_3/README.md)
 	- New C++ standarts: Smart Pointers
 	- Константність та lambda
 
