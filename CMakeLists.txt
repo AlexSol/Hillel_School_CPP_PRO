@@ -19,3 +19,4 @@ set(CMAKE_CXX_STANDARD 23)
 
 # add_subdirectory(lesson_1)
 add_subdirectory(lesson_2)
+add_subdirectory(lesson_3)
