@@ -29,7 +29,22 @@
 ## 3. ДЗ
 
 3.0 Практика використання:
-- `std::unique_ptr`
+- `std::unique_ptr`, Досвід RAII
+
+Cтворіть клас для управління ресурсами, якими володіє лише один клас (наприклад файлом). Який автоматично закривається при виході з області видимість. Використовуйте `std::unique_ptr` для керування часом життя цього ресурсу
+при
+спрощений приклад інтерфейса класа для роботи з текстовими файлами
+```cpp
+class FileWrapper
+{
+public:
+	FileWrapper(const std::string& filename);
+	void write(const std::string& data);
+	explicit operator bool() const noexcept; // повертає False якщо файл не змогли створити.
+	~FileWrapper();
+};
+```
+
 - `std::shared_ptr`
 
 3.1 Реалізувати власний спрощений варіант `std::unique_ptr`.
