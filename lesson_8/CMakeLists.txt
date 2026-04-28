@@ -4,4 +4,7 @@ cmake_minimum_required(VERSION 3.5)
 project(lesson_8 VERSION 1.0.0 LANGUAGES CXX)
 
 add_subdirectory(Simple_example)
+add_subdirectory(QPushButton)
+add_subdirectory(QProgressBar)
+add_subdirectory(QSpinBox)
 
