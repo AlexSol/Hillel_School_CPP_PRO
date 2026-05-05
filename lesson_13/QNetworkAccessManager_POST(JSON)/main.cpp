@@ -26,6 +26,8 @@ int main(int argc, char *argv[])
     QJsonDocument jsonDoc(json);
     QByteArray jsonData = jsonDoc.toJson();
 
+    //QByteArray body = R"({"user":"admin","pass":"123"})";  як альтернатива створенню JSON-об'єкта
+
     // Виконуємо POST-запит
     QNetworkReply *reply = manager.post(request, jsonData);
 

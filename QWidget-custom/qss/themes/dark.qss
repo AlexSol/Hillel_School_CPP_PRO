@@ -1,0 +1,114 @@
+/* ══════════════════════════════════════════
+   Dark Theme  — QWidget-custom/qss demo
+   Завантажується з файлу через QFile
+   ══════════════════════════════════════════ */
+
+QWidget {
+    background-color: #1a202c;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 13px;
+    color: #e2e8f0;
+}
+
+QGroupBox {
+    border: 2px solid #805ad5;
+    border-radius: 8px;
+    margin-top: 10px;
+    padding-top: 6px;
+    font-weight: bold;
+    color: #b794f4;
+}
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top left;
+    padding: 0 6px;
+}
+
+QPushButton {
+    background-color: #6b46c1;
+    color: #f7fafc;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 16px;
+    min-width: 80px;
+}
+QPushButton:hover    { background-color: #805ad5; }
+QPushButton:pressed  { background-color: #553c9a; }
+QPushButton:disabled { background-color: #4a5568; color: #718096; }
+
+QLineEdit {
+    border: 1px solid #4a5568;
+    border-radius: 5px;
+    padding: 4px 8px;
+    background: #2d3748;
+    color: #e2e8f0;
+    selection-background-color: #6b46c1;
+}
+QLineEdit:focus { border-color: #805ad5; }
+
+QLabel { color: #cbd5e0; }
+
+QCheckBox { color: #cbd5e0; }
+QCheckBox::indicator {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #805ad5;
+    border-radius: 3px;
+    background: #2d3748;
+}
+QCheckBox::indicator:checked { background-color: #805ad5; }
+
+QRadioButton { color: #cbd5e0; }
+QRadioButton::indicator {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #805ad5;
+    border-radius: 8px;
+    background: #2d3748;
+}
+QRadioButton::indicator:checked { background-color: #805ad5; }
+
+QComboBox {
+    border: 1px solid #4a5568;
+    border-radius: 5px;
+    padding: 4px 8px;
+    background: #2d3748;
+    color: #e2e8f0;
+}
+QComboBox::drop-down { border: none; }
+QComboBox QAbstractItemView {
+    background: #2d3748;
+    color: #e2e8f0;
+    selection-background-color: #6b46c1;
+}
+
+QProgressBar {
+    border: 1px solid #4a5568;
+    border-radius: 5px;
+    text-align: center;
+    background: #2d3748;
+    color: #e2e8f0;
+    height: 18px;
+}
+QProgressBar::chunk {
+    background-color: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+                                      stop:0 #6b46c1, stop:1 #9f7aea);
+    border-radius: 4px;
+}
+
+QSlider::groove:horizontal {
+    height: 6px;
+    background: #4a5568;
+    border-radius: 3px;
+}
+QSlider::handle:horizontal {
+    background: #805ad5;
+    width: 16px;
+    height: 16px;
+    margin: -5px 0;
+    border-radius: 8px;
+}
+QSlider::sub-page:horizontal {
+    background: #805ad5;
+    border-radius: 3px;
+}

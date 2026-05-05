@@ -12,7 +12,7 @@ int main(int argc, char *argv[]) {
 
     QHttpServer server;
 
-    // Обробка запиту на кореневий маршрут "/"
+    // Обробка запиту на маршрут "/"
     server.route("/", QHttpServerRequest::Method::Get, [](const QHttpServerRequest &request) {
 
         printRequest(request);

@@ -4,6 +4,24 @@
 #include <QDebug>
 #include <QDateTime>
 
+
+// Простий HTTP-сервер на основі QTcpServer
+// QTcpServer* server = new QTcpServer(this);
+
+// connect(server, &QTcpServer::newConnection, [server]() {
+//     QTcpSocket* client = server->nextPendingConnection();
+
+//     QObject::connect(client, &QTcpSocket::readyRead, [client]() {
+//         QByteArray data = client->readAll();
+//         client->write("OK");
+//     });
+// });
+
+// server->listen(QHostAddress::Any, 8080);
+
+
+
+// Альтернативний підхід з власним класом, що наслідує QTcpServer
 class HttpServer : public QTcpServer
 {
     Q_OBJECT

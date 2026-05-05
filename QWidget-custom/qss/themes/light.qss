@@ -1,0 +1,110 @@
+/* ══════════════════════════════════════════
+   Light Theme  — QWidget-custom/qss demo
+   Завантажується з файлу через QFile
+   ══════════════════════════════════════════ */
+
+QWidget {
+    background-color: #ffffff;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 13px;
+    color: #1a202c;
+}
+
+QGroupBox {
+    border: 2px solid #38a169;
+    border-radius: 8px;
+    margin-top: 10px;
+    padding-top: 6px;
+    font-weight: bold;
+    color: #276749;
+}
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top left;
+    padding: 0 6px;
+}
+
+QPushButton {
+    background-color: #38a169;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 16px;
+    min-width: 80px;
+}
+QPushButton:hover    { background-color: #2f855a; }
+QPushButton:pressed  { background-color: #276749; }
+QPushButton:disabled { background-color: #a0aec0; color: #e2e8f0; }
+
+QLineEdit {
+    border: 1px solid #c6f6d5;
+    border-radius: 5px;
+    padding: 4px 8px;
+    background: #f0fff4;
+    color: #1a202c;
+    selection-background-color: #9ae6b4;
+}
+QLineEdit:focus { border-color: #38a169; }
+
+QLabel { color: #2d3748; }
+
+QCheckBox::indicator {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #38a169;
+    border-radius: 3px;
+    background: white;
+}
+QCheckBox::indicator:checked { background-color: #38a169; }
+
+QRadioButton::indicator {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #38a169;
+    border-radius: 8px;
+    background: white;
+}
+QRadioButton::indicator:checked { background-color: #38a169; }
+
+QComboBox {
+    border: 1px solid #c6f6d5;
+    border-radius: 5px;
+    padding: 4px 8px;
+    background: #f0fff4;
+}
+QComboBox::drop-down { border: none; }
+QComboBox QAbstractItemView {
+    background: #f0fff4;
+    selection-background-color: #9ae6b4;
+}
+
+QProgressBar {
+    border: 1px solid #c6f6d5;
+    border-radius: 5px;
+    text-align: center;
+    background: #f0fff4;
+    color: #276749;
+    height: 18px;
+}
+QProgressBar::chunk {
+    background-color: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+                                      stop:0 #38a169, stop:1 #68d391);
+    border-radius: 4px;
+}
+
+QSlider::groove:horizontal {
+    height: 6px;
+    background: #c6f6d5;
+    border-radius: 3px;
+}
+QSlider::handle:horizontal {
+    background: #38a169;
+    width: 16px;
+    height: 16px;
+    margin: -5px 0;
+    border-radius: 8px;
+}
+QSlider::sub-page:horizontal {
+    background: #38a169;
+    border-radius: 3px;
+}
