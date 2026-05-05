@@ -4,3 +4,4 @@ project(QWidget_custom VERSION 1.0.0 LANGUAGES CXX)
 
 add_subdirectory(qss)
 add_subdirectory(subclass_events)
+add_subdirectory(custom_painting)
