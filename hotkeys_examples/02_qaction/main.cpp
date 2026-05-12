@@ -18,8 +18,12 @@ int main(int argc, char *argv[])
 
     auto *fileMenu = window.menuBar()->addMenu("File");
     auto *saveAction = fileMenu->addAction("Save");
-    saveAction->setShortcut(QKeySequence("Ctrl+S"));
+    saveAction->setShortcut(QKeySequence("Ctrl+1"));
     saveAction->setShortcutContext(Qt::WindowShortcut);
+
+    auto *saveAction_2 = saveAction->menu()->addAction("Save As");
+    // saveAction_2->setShortcut(QKeySequence("Ctrl+2"));
+    // saveAction_2->setShortcutContext(Qt::WindowShortcut);
 
     QObject::connect(saveAction, &QAction::triggered, [&window, label] {
         label->setText("QAction: Ctrl+S спрацював");

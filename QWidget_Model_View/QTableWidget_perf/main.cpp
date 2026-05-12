@@ -10,9 +10,9 @@ int main(int argc, char *argv[]) {
 
     auto start = std::chrono::high_resolution_clock::now();
 
-    QTableWidget* table = new QTableWidget(100000, 3);
+    QTableWidget* table = new QTableWidget(1000000, 3);
 
-    for(int i = 0; i < 100000; i++)
+    for(int i = 0; i < 1000000; i++)
     {
         for(int j = 0; j < 3; j++)
         {

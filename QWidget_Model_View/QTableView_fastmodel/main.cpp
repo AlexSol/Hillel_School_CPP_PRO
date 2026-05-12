@@ -2,9 +2,12 @@
 #include <QApplication>
 #include <QTableView>
 
+#include <chrono>
+#include <iostream>
+
 class FastModel : public QAbstractTableModel {
 public:
-    int rowCount(const QModelIndex&) const override { return 1'000'000; }
+    int rowCount(const QModelIndex&) const override { return 5'000'000; }
     int columnCount(const QModelIndex&) const override { return 3; }
 
     QVariant data(const QModelIndex& index, int role) const override {
@@ -15,10 +18,14 @@ public:
         }
         return {};
     }
+
+    // data store;
 };
 
 int main(int argc, char* argv[]) {
     QApplication app(argc, argv);
+
+    auto start = std::chrono::high_resolution_clock::now();
 
     auto* model = new FastModel();
 
@@ -27,6 +34,11 @@ int main(int argc, char* argv[]) {
     view.setWindowTitle("QTableView + FastModel (QAbstractTableModel)");
     view.resize(900, 520);
     view.show();
+
+    auto end = std::chrono::high_resolution_clock::now();
+    std::cout << "QTableView + FastModel time: "
+              << std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count()
+              << " ms\n";
 
     return app.exec();
 }
